@@ -26,3 +26,5 @@ permalink: /posts/:slug.html
 sass:
   sass_dir: _sass
   style: compressed
+
+css_version: "001"
