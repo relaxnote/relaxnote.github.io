@@ -19,7 +19,7 @@ exclude:
 paginate: 30
 paginate_path: "/posts/page-:num"
 ## permalink: /:categories/:year/:month/:day/:title.html
-permalink: /posts/:slug.html
+permalink: /post/:slug.html
 ## google_analytics: ""
 ## baidu_analytics: "b311425eaa11ff31018da2f08edea7c3"
 
