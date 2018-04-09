@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <i class="fa fa-calendar"></i>
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.author %}
+        &nbsp;&nbsp;<i class="fa fa-user"></i>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+      {% if page.tags %}
+        &nbsp;&nbsp;<i class="fa fa-tags"></i>
+        {% for tag in page.tags %}
+          {{ tag }}</span>
+        {% endfor %}
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if page.with_copyright or page.with_reward %}
+  <div class="post-information">
+    {% if page.with_copyright %}
+      <div class="post-copyright clearfix">
+        <div class="l-title">版权声明</div>
+        <ul>
+          <li>作者：{{ page.author }}，著作权归作者所有，转载请注明作者出处来源</li>
+          <li>链接：<a href="{{ site.prod_baseurl }}{{ page.url }}">{{ site.prod_baseurl }}{{ page.url }}</a></li>
+          <li>来源：{{ site.title }} <a href="{{ site.prod_baseurl }}">{{ site.prod_baseurl }}</a></li>
+        </ul>
+      </div>
+    {% endif %}
+    {% if page.with_reward %}
+      <div class="post-reward clearfix">
+        <div class="l-title">联系我或打赏</div>
+        <div class="l-contact-box">
+          <img src="/static/images/authors/{{page.author}}/alipay.png"></img>
+          <div class="l-tip">支付宝打赏</div>
+        </div>
+        <div class="l-contact-box">
+          <img src="/static/images/authors/{{page.author}}/wechat-pay.png"></img>
+          <div class="l-tip">微信打赏</div>
+        </div>
+        <div class="l-contact-box">
+          <img src="/static/images/authors/{{page.author}}/wechat.png"></img>
+          <div class="l-tip">加我好友</div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

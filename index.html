@@ -1,0 +1,59 @@
+---
+layout: home
+---
+<div class="home">
+  <h1 class="page-heading">文章列表</h1>
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li class="l-post">
+        {% if post.title %}
+          <h2>
+            <a target="_blank" class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        {% endif %}
+        {% if post.excerpt %}
+          <a target="_blank" href="{{ post.url | relative_url }}" class="post-excerpt">
+            <p>
+              {{ post.excerpt | escape }}
+            </p>
+          </a>
+        {% endif %}
+        <p class="post-meta">
+          <i class="fa fa-calendar"></i>
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%Y-%m-%d" }}</time>
+          {% if post.author %}
+            &nbsp;&nbsp;<i class="fa fa-user"></i>
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>
+          {% endif %}
+          {% if post.tags %}
+            &nbsp;&nbsp;<i class="fa fa-tags"></i>
+            {% for tag in post.tags %}
+              {{ tag }}</span>
+            {% endfor %}
+          {% endif %}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="l-button l-page-button">&laquo;</a>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="l-button l-current-page-button">{{ page }}</a>
+        {% elsif page == 1 %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="l-button l-page-button">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="l-button l-page-button">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="l-button l-page-button">&raquo;</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

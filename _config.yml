@@ -1,0 +1,24 @@
+---
+title: 5188创业指南网
+email: ""
+author: 5188.org
+keywords: ""
+description: '准备开始创业致富?先到创业第一步网。创业网收集创业故事，让你了解先辈成功、失败经验，我们还收集了众多的创业新项目，总结寻找商机的经验，让你轻松找到适合自己的机会，更有精彩视频供大家学习，祝你成功。'
+baseurl: ''
+url: ''
+prod_baseurl: "http://www.5188.org"
+github_username: 5188org
+markdown: kramdown
+# theme: minima
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+paginate: 30
+paginate_path: "/posts/page-:num"
+## permalink: /:categories/:year/:month/:day/:title.html
+permalink: /posts/:slug.html
+## google_analytics: ""
+## baidu_analytics: "b311425eaa11ff31018da2f08edea7c3"
