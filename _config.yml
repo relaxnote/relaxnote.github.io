@@ -1,15 +1,14 @@
 ---
-title: 5188创业指南网
+title: 开发导航 - Dev800
 email: ""
-author: 5188.org
-keywords: ""
-description: '准备开始创业致富?先到创业第一步网。创业网收集创业故事，让你了解先辈成功、失败经验，我们还收集了众多的创业新项目，总结寻找商机的经验，让你轻松找到适合自己的机会，更有精彩视频供大家学习，祝你成功。'
+author: dev800.com
+keywords: "w3cschool,HTML,CSS,PHP,DOM,JavaScript,jQuery,XML,AJAX,ASP.NET,W3C,MySQL,SQL,jquery mobile,bootstrap,Python,jquery easyui,jquery ui,angularjs"
+description: 'dev800提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供了大量的在线实例，通过实例，您可以更好的学习编程。'
 baseurl: ''
 url: ''
-prod_baseurl: "http://www.5188.org"
-github_username: 5188org
+prod_baseurl: "http://www.dev800.com"
+github_username: dev800
 markdown: kramdown
-# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -18,7 +17,6 @@ exclude:
   - Gemfile.lock
 paginate: 30
 paginate_path: "/posts/page-:num"
-## permalink: /:categories/:year/:month/:day/:title.html
 permalink: /post/:slug.html
 ## google_analytics: ""
 ## baidu_analytics: "b311425eaa11ff31018da2f08edea7c3"
