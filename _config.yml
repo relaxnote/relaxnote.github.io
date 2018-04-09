@@ -25,4 +25,4 @@ sass:
   sass_dir: _sass
   style: compressed
 
-css_version: "001"
+css_version: "002"
