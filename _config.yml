@@ -22,3 +22,7 @@ paginate_path: "/posts/page-:num"
 permalink: /posts/:slug.html
 ## google_analytics: ""
 ## baidu_analytics: "b311425eaa11ff31018da2f08edea7c3"
+
+sass:
+  sass_dir: _sass
+  style: compressed
