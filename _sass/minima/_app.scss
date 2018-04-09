@@ -1,9 +1,9 @@
 .m-friend-links {
-  background-color: #eeeeee;
+  background-color: $background-color;
   position: relative;
 
   .l-name {
-    background-color: #348ee8;
+    background-color: $grey-color-dark;
     color: #fff;
     text-align: center;
     font-size: 16px;
@@ -18,7 +18,7 @@
       width: 0;
       height: 0;
       border-top: 13px solid transparent;
-      border-left: 15px solid #348ee8;
+      border-left: 15px solid $grey-color-dark;
       border-bottom: 13px solid transparent;
       top: 50%;
       margin-top: -13px;

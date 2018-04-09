@@ -26,4 +26,4 @@ sass:
   sass_dir: _sass
   style: compressed
 
-css_version: "002"
+css_version: "003"
