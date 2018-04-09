@@ -1,13 +1,14 @@
 ---
-title: 开发导航 - Dev800
+title: Relax Note
 email: ""
-author: dev800.com
-keywords: "w3cschool,HTML,CSS,PHP,DOM,JavaScript,jQuery,XML,AJAX,ASP.NET,W3C,MySQL,SQL,jquery mobile,bootstrap,Python,jquery easyui,jquery ui,angularjs"
-description: 'dev800提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供了大量的在线实例，通过实例，您可以更好的学习编程。'
+author: relaxnote.com
+keywords: ""
+description: ''
 baseurl: ''
 url: ''
-prod_baseurl: "http://www.dev800.com"
-github_username: dev800
+prod_baseurl: "http://www.relaxnote.com"
+github_username: relaxnote
+twitter_username: relaxnote
 markdown: kramdown
 plugins:
   - jekyll-feed

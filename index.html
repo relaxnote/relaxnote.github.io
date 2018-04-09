@@ -2,17 +2,17 @@
 layout: home
 ---
 <div class="home">
-  <h1 class="page-heading">文章列表</h1>
+  <h1 class="page-heading">Posts List</h1>
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li class="l-post">
         {% if post.title %}
           <h2>
-            <a target="_blank" class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h2>
         {% endif %}
         {% if post.excerpt %}
-          <a target="_blank" href="{{ post.url | relative_url }}" class="post-excerpt">
+          <a href="{{ post.url | relative_url }}" class="post-excerpt">
             <p>
               {{ post.excerpt | escape }}
             </p>
