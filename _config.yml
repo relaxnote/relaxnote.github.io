@@ -10,7 +10,7 @@ prod_baseurl: "http://www.5188.org"
 github_username: 5188org
 markdown: kramdown
 # theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
 exclude:
